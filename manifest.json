@@ -1,0 +1,49 @@
+{
+    "name": "Firefox Myレコーダー",
+    "short_name": "FF Myレコーダー",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "My Recorder | KING OF TIME のFirefox 拡張機能",
+
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+
+    "options_ui": {
+        "page": "options/options.html",
+        "open_in_tab": true
+    },
+
+    "browser_action": {
+        "default_icon": "icons/icon19.png",
+        "default_title": "Firefox Myレコーダー",
+        "default_popup": "popup/my-recorder.html"
+    },
+
+    "permissions": [
+        "https://s3.kingtime.jp/independent/recorder/personal/*",
+        "https://slack.com/api/*",
+        "https://hooks.slack.com/services/*",
+        "storage"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://s3.kingtime.jp/independent/recorder/personal/*"],
+            "js": ["slack-integration.js"],
+            "all_frames": true
+        }
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "applications": {
+        "gecko": {
+            "id": "kot-myrecorder-addon@example.com"
+        }
+    }
+}
