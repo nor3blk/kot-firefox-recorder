@@ -1,7 +1,6 @@
 {
-    "name": "Firefox Myレコーダー",
-    "short_name": "FF Myレコーダー",
-    "version": "0.0.1",
+    "name": "KOT Myレコーダー アドオン",
+    "version": "0.0.2",
     "manifest_version": 2,
     "description": "My Recorder | KING OF TIME のFirefox 拡張機能",
 
