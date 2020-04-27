@@ -119,10 +119,10 @@
         // Message
         slackEnabled = items.slackEnabled;
         slackChannel = items.slackChannel;
-        slackClockInMessage = items.slackClockInMessage;
-        slackClockOutMessage = items.slackClockOutMessage;
-        slackTakeABreakMessage = items.slackTakeABreakMessage;
-        slackBreakIsOverMessage = items.slackBreakIsOverMessage;
+        slackClockInMessage = items.slackClockInMessage.replace('\\n', '\n');
+        slackClockOutMessage = items.slackClockOutMessage.replace('\\n', '\n');
+        slackTakeABreakMessage = items.slackTakeABreakMessage.replace('\\n', '\n');
+        slackBreakIsOverMessage = items.slackBreakIsOverMessage.replace('\\n', '\n');
         slackToken = items.slackToken;
         slackWebhooksUrl = items.slackWebhooksUrl;
 
